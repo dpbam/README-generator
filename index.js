@@ -9,7 +9,7 @@ const fs = require('fs');
     questions = [
         // {
         //     type: 'input',
-        //     name: 'GitHub username',
+        //     name: 'github',
         //     message: 'What is your GitHub username?',
         //     validate: githubName => {
         //         if (githubName) {
@@ -46,19 +46,19 @@ const fs = require('fs');
                 }
             }
         },
-        // {
-        //     type: 'input',
-        //     name: 'description',
-        //     message: 'Enter a description for your project',
-        //     validate: projectDescription => {
-        //         if (projectDescription) {
-        //             return true;
-        //         } else {
-        //             console.log("Please, pretty please, enter a short description of your project or this README is going to be sparse. Gimme that sweet, sweet content.")
-        //             return false;
-        //         }
-        //     }
-        // },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Enter a description for your project',
+            validate: projectDescription => {
+                if (projectDescription) {
+                    return true;
+                } else {
+                    console.log("Please, pretty please, enter a short description of your project or this README is going to be sparse. Gimme that sweet, sweet content.")
+                    return false;
+                }
+            }
+        },
         // {
         //     type: 'input',
         //     name: 'tableOfContents',
@@ -104,7 +104,7 @@ function init() {
 };
 
 function generateMarkdown(data) {
-    return "README.md", `# ${data.title}\n`
+    return "README.md", `# ${data.title}\n ## Description ${data.description}\n`
 
 
 }
