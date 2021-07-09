@@ -2,24 +2,24 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 // const generateMarkdown = require("./src/page-template.js");
-const generateMarkdown = require("./utils/generate-site.js");
+// const generateMarkdown = require("./utils/generate-site.js");
 
 
 // TODO: Create an array of questions for user input
     questions = [
-        {
-            type: 'input',
-            name: 'GitHub username',
-            message: 'What is your GitHub username?',
-            validate: githubName => {
-                if (githubName) {
-                    return true;
-                } else {
-                    console.log("Try again.")
-                    return false;
-                }
-            }
-        },
+        // {
+        //     type: 'input',
+        //     name: 'GitHub username',
+        //     message: 'What is your GitHub username?',
+        //     validate: githubName => {
+        //         if (githubName) {
+        //             return true;
+        //         } else {
+        //             console.log("Try again.")
+        //             return false;
+        //         }
+        //     }
+        // },
         // {
         //     type: 'input',
         //     name: 'email',
@@ -33,19 +33,19 @@ const generateMarkdown = require("./utils/generate-site.js");
         //         }
         //     }
         // },
-        // {
-        //     type: 'input',
-        //     name: 'title',
-        //     message: 'What is your project title?',
-        //     validate: titleInput => {
-        //         if (titleInput) {
-        //             return true;
-        //         } else {
-        //             console.log("Hey, bonehead! Try again.")
-        //             return false;
-        //         }
-        //     }
-        // },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is your project title?',
+            validate: titleInput => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log("Hey, bonehead! Try again.")
+                    return false;
+                }
+            }
+        },
         // {
         //     type: 'input',
         //     name: 'description',
@@ -59,18 +59,18 @@ const generateMarkdown = require("./utils/generate-site.js");
         //         }
         //     }
         // },
-        // // {
-        // //     type: 'input',
-        // //     name: 'tableOfContents',
-        // //     message: 'If your README is very long, add a table of contents to make it easy for users to find what they need. (optional)',
-        // //     validate: tableOfContents => {
-        // //         if (tableOfContents) {
-        // //             return true;
-        // //         } else {
-        // //             return false;
-        // //         }
-        // //     }
-        // // },
+        // {
+        //     type: 'input',
+        //     name: 'tableOfContents',
+        //     message: 'If your README is very long, add a table of contents to make it easy for users to find what they need. (optional)',
+        //     validate: tableOfContents => {
+        //         if (tableOfContents) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     }
+        // },
         // {
         //     type: 'checkbox',
         //     name: 'languages',
@@ -103,7 +103,11 @@ function init() {
     })
 };
 
+function generateMarkdown(data) {
+    return "README.md", `# ${data.title}\n`
 
+
+}
 
 // Function call to initialize app
 init();
