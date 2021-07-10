@@ -1,7 +1,6 @@
-# readme generatorrrrrr
- 
+# readme generatorrrr
     ## License:
-    [![License](https://img.shields.io/badge/License-Apache-2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+    [![License](https://img.shields.io/badge/License--blue.svg)](https://opensource.org/licenses/)
 
 
     ## Table of Contents
@@ -9,11 +8,10 @@
     - [Installation](#installation)
     - 
 
-    ## Description generates a readme
-
+    ## Description generates readme
 
     ## Contact info:
-    -GitHub: [dpbam](https://github.com/dpbam)
-    -email: derek@hotmail.com
+    - GitHub: [dpbam](https://github.com/dpbam)
+    - email: derek@hotmail.com
     
     

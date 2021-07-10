@@ -118,7 +118,7 @@ function init() {
 };
 
 function generateMarkdown(data) {
-    return "README.md", `# ${data.title}\n 
+    return `# ${data.title}
     ## License:
     [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 
@@ -128,11 +128,11 @@ function generateMarkdown(data) {
     - [Installation](#installation)
     - 
 
-    ## Description ${data.description}\n
+    ## Description ${data.description}
 
     ## Contact info:
-    -GitHub: [${data.github}](https://github.com/${data.github})
-    -email: ${data.email}
+    - GitHub: [${data.github}](https://github.com/${data.github})
+    - email: ${data.email}
     
     `
 
