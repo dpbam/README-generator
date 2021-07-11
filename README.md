@@ -1,8 +1,4 @@
-# readmmmmmmeeeee
-
-## License:
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache%202.0-blue)
-
+# README Generator
 
 ## Table of Contents
 - [Description](#description)
@@ -11,21 +7,25 @@
 - [Languages](#languages)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [Contact info](#contact)
+- [Questions](#questions)
 - [License](#license)
 
 ## Description:
- aasdfasdf;lkja;sldkfj
+ generates a readme for the user
 ## Installation:
- 1. go 2. go 3. stop
+ npm install
 ## Usage:
- use it to make a readme
+ generates a a readme after answering a series of questions
 ## Languages:
- Javascript,ES6
+ Javascript,ES6,jQuery,Node
 ## Contributing:
- they can't
+ they can't yet
 ## Tests:
- undefined
-## Contact info:
-    - GitHub: [dpbam](https://github.com/dpbam)
-    - email: derek@hotmail.com
+ run it with node index
+## License:
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache%202.0)
+## Questions:
+* GitHub: 
+[dpbam](https://github.com/dpbam)
+* email: 
+derek@hotmail.com

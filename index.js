@@ -1,11 +1,8 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateMarkdown = require("./src/page-template.js");
-// const generateMarkdown = require("./utils/generate-site.js");
 
-
-// TODO: Create an array of questions for user input
+// questions for user input
     questions = [
         {
             type: 'input',
@@ -49,7 +46,7 @@ const fs = require('fs');
         {
             type: 'input',
             name: 'description',
-            message: 'Enter a description for your project',
+            message: 'Enter a description for your project:',
             validate: projectDescription => {
                 if (projectDescription) {
                     return true;
@@ -95,15 +92,16 @@ const fs = require('fs');
             type: 'checkbox',
             name: 'license',
             message: 'Choose a license from the list that suits your project.',
-            choices: ['Apache%202.0-blue','IPL%201.0-blue', 'None of the Above'],
+            choices: ['Apache%202.0','ISC'],
             validate: userLicense => {
                 if (userLicense) {
-                    return true;
+                    return true;  
                 } else {
                     console.log("Select a license for the project.");
                     return false;
                 }
-            }
+
+            }        
         },
         {
             type: 'input',
@@ -134,7 +132,7 @@ const fs = require('fs');
     ]
 
     
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFile(fileName, data, function(err) {
         if(err) {
@@ -145,7 +143,7 @@ function writeToFile(fileName, data) {
     
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     console.log("Welcome to the README.md generator 2000.\nPlease answer some questions to get started.")
     inquirer.prompt(questions)
@@ -156,13 +154,11 @@ function init() {
     })
 };
 
+// function to generate markdown
+
 function generateMarkdown(data) {
     return(
 `# ${data.title}
-
-## License:
-[![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
-
 
 ## Table of Contents
 - [Description](#description)
@@ -186,12 +182,14 @@ function generateMarkdown(data) {
  ${data.contribution}
 ## Tests:
  ${data.tests}
+## License:
+[![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 ## Questions:
-    * GitHub: [${data.github}](https://github.com/${data.github})
-    * email: ${data.email}
+* GitHub: 
+[${data.github}](https://github.com/${data.github})
+* email: 
+${data.email}
 `)
-
-
 
 }
 
