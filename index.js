@@ -61,12 +61,25 @@ const fs = require('fs');
         },
         {
             type: 'input',
-            name: 'tableOfContents',
-            message: 'If your README is very long, add a table of contents to make it easy for users to find what they need. (optional)',
-            validate: tableOfContents => {
-                if (tableOfContents) {
+            name: 'installation',
+            message: 'List the steps needed to install your project.',
+            validate: installation => {
+                if (installation) {
                     return true;
                 } else {
+                    console.log("Please list the steps we need to take to successfully install your application.");
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'How do you use your project?',
+            validate: yourUsage => {
+                if (yourUsage) {
+                    return true;
+                } else {
+                    console.log("Seriously, how do you use this thing?")
                     return false;
                 }
             }
@@ -82,16 +95,42 @@ const fs = require('fs');
             type: 'checkbox',
             name: 'license',
             message: 'Choose a license from the list that suits your project.',
-            choices: ['Apache-2.0','IBM', 'MIT', 'Eclipse'],
+            choices: ['Apache%202.0-blue','IPL%201.0-blue', 'None of the Above'],
             validate: userLicense => {
                 if (userLicense) {
                     return true;
                 } else {
-                    console.log("Select a license for the project.")
+                    console.log("Select a license for the project.");
                     return false;
                 }
             }
-        }
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'How can other users contribute to this project?',
+            validate: yourContribution => {
+                if (yourContribution) {
+                    return true;
+                } else {
+                    console.log("Provide some info on how to contribute to your project.");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'How does the user test this app to make sure it is functioning properly?',
+            validate: yourTests => {
+                if (yourTests) {
+                    return true;
+                } else {
+                    console.log("Please try again to explain how to test this app. Thanks.");
+                    return false;
+                }
+            }
+        },
     ]
 
     
@@ -118,23 +157,39 @@ function init() {
 };
 
 function generateMarkdown(data) {
-    return `# ${data.title}
-    ## License:
-    [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+    return(
+`# ${data.title}
+
+## License:
+[![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 
 
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - 
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Languages](#languages)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
 
-    ## Description ${data.description}
-
-    ## Contact info:
-    - GitHub: [${data.github}](https://github.com/${data.github})
-    - email: ${data.email}
-    
-    `
+## Description:
+ ${data.description}
+## Installation:
+ ${data.installation}
+## Usage:
+ ${data.usage}
+## Languages:
+ ${data.languages}
+## Contributing:
+ ${data.contribution}
+## Tests:
+ ${data.tests}
+## Questions:
+    * GitHub: [${data.github}](https://github.com/${data.github})
+    * email: ${data.email}
+`)
 
 
 
