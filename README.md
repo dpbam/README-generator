@@ -11,15 +11,15 @@
 - [License](#license)
 
 ## Description:
- generates a readme for the user
+ This app generates a readme based on questions that the user answers. Using node.js.
 ## Installation:
  npm install
 ## Usage:
- generates a a readme after answering a series of questions
+ Use it to generate a readme for a user.
 ## Languages:
  Javascript,ES6,jQuery,Node
 ## Contributing:
- they can't yet
+ they aren't allowed yet because I don't want them to contribute unless they pay me lots of money.
 ## Tests:
  run it with node index
 ## License:
