@@ -17,6 +17,9 @@ This app generates a README.md file for the user based on a series of questions 
  * inquirer
  * fs
 
+ ## Usage:
+ https://drive.google.com/file/d/1M3ZnoO1EVtOaL-Naz3UB5ruV_pya-pxQ/view
+
  ## Help from:
  * https://github.com/coding-boot-camp/potential-enigma/blob/main/readme-guide.md
  * https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
@@ -25,5 +28,5 @@ This app generates a README.md file for the user based on a series of questions 
  * YouTube 
  * neighbor
 
- ## Contact:
+ ## Contact for questions:
  * GitHub: [dpbam](https://github.com/dpbam) 
