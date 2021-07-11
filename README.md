@@ -11,17 +11,17 @@
 - [License](#license)
 
 ## Description:
- This app generates a readme based on questions that the user answers. Using node.js.
+ generates a readme file and markdown for that file based on answers the user provides to questions
 ## Installation:
  npm install
 ## Usage:
- Use it to generate a readme for a user.
+ generates readme
 ## Languages:
  Javascript,ES6,jQuery,Node
 ## Contributing:
- they aren't allowed yet because I don't want them to contribute unless they pay me lots of money.
+ they can't yet unless they give me a lot of money or pizza
 ## Tests:
- run it with node index
+ run it
 ## License:
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache%202.0)
 ## Questions:
